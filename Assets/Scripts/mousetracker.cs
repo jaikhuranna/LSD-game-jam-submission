@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class mousetracker : MonoBehaviour
@@ -11,6 +12,7 @@ public class mousetracker : MonoBehaviour
     // the chacter is the capsule
     public GameObject character;
     // get the incremental value of mouse moving
+    private Quaternion clampRotation;
     private Vector2 mouseLook;
     // smooth the mouse moving
     private Vector2 smoothV;
@@ -30,6 +32,11 @@ public class mousetracker : MonoBehaviour
         smoothV.y = Mathf.Lerp(smoothV.y, md.y, 1f / smoothing);
         // incrementally add to the camera look
         mouseLook += smoothV;
+
+        mouseLook.y = Mathf.Clamp(mouseLook.y, -90f, 90f);
+        
+        
+        
 
         // vector3.right means the x-axis
         transform.localRotation = Quaternion.AngleAxis(-mouseLook.y, Vector3.right);
