@@ -13,7 +13,7 @@ public class mousetracker : MonoBehaviour
     public GameObject character;
     // get the incremental value of mouse moving
     private Quaternion clampRotation;
-    private Vector2 mouseLook;
+    public Vector2 mouseLook;
     // smooth the mouse moving
     private Vector2 smoothV;
 
