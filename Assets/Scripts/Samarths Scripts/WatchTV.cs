@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ public class WatchTV : MonoBehaviour, IInteractable
 {
     public GameObject player;
     public charactermovement cmScript;
+    public mousetracker mtScript;
     private Vector3 startPos;
     private Vector3 startScale;
     private bool isSitting;
@@ -36,5 +38,10 @@ public class WatchTV : MonoBehaviour, IInteractable
             cmScript.enabled = true;
             player.transform.localScale = startScale;
         }
+
+        //*if (isSitting)
+        //{ 
+            //mtScript.mouseLook.x = Mathf.Clamp(mtScript.mouseLook.x, -120f, 120f);
+        //}
     }
 }
