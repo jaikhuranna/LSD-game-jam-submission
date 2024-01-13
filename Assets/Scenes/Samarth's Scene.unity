@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57d151b1987e20b4880b636328f94f6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 1.3
   player: {fileID: 18481654}
   rb: {fileID: 18481660}
   jumpspeed: 0
@@ -2589,6 +2589,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 18481654}
   cmScript: {fileID: 18481661}
+  mtScript: {fileID: 1118643469}
 --- !u!65 &8670356511522886921
 BoxCollider:
   m_ObjectHideFlags: 0
