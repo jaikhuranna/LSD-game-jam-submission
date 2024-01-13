@@ -1,0 +1,40 @@
+
+This Document is to write some stuff for the code that is written, so it can be understood better.
+Describe features implemented and how, so that it wont be confused later.
+
+When dealing with a Scene, Make a copy if it, and add your Name with Testing. We can transfer stuff later,
+That way, we dont have conflicts with the git.
+
+    Format:
+    - Use any name followed by () to refer to a feature, use a "-" as points under that 
+    - Any features that you feel is under another, put it under them with a tab.
+
+
+
+CameraTracker()
+    - X axis is pure camera movement, clamped for use
+    - Y axis is tied to the character, so that movement uses "forward"
+   
+CharacterMovement()
+    -Uses GetAxis and Velocity for movement
+    -Locks the cursor, so it looks nice
+    
+InteractionController()
+    -Checks if there is an object in front of it
+    -IF the object can be interacted with, then display the UI message
+    -Does not change the referred object to save resources
+    -When E is pressed, Fire Interact with the confirmed interactable object
+    -When SPACE is pressed, Fire Release with the confirmed interactable object
+    
+InteractionObject()
+    -Has 3 functions
+    -Interact, Release, and SeeObject
+    -To be inherited by all interactable objects
+    -Not all objects will have a release
+
+SitSofa()
+    -Makes the player sit on sofa, disables movement
+    -There is a release, to get of sofa    
+    
+MedicineBag()
+    -Currently only has a message

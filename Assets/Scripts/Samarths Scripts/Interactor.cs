@@ -15,10 +15,6 @@ public class Interactor : MonoBehaviour
     // this is the distance from where player can interact
     public float interactRange;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()

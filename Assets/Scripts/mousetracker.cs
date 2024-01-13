@@ -9,7 +9,7 @@ public class mousetracker : MonoBehaviour
     public float sensitivity = 5.0f;
     [SerializeField]
     public float smoothing = 2.0f;
-    // the chacter is the capsule
+    // the character is the capsule
     public GameObject character;
     // get the incremental value of mouse moving
     private Quaternion clampRotation;
@@ -24,7 +24,7 @@ public class mousetracker : MonoBehaviour
 	
     // Update is called once per frame
     void Update () {
-        // md is mosue delta
+        // md is mouse delta
         var md = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
         md = Vector2.Scale(md, new Vector2(sensitivity * smoothing, sensitivity * smoothing));
         // the interpolated float result between the two float values
@@ -35,9 +35,6 @@ public class mousetracker : MonoBehaviour
 
         mouseLook.y = Mathf.Clamp(mouseLook.y, -90f, 90f);
         
-        
-        
-
         // vector3.right means the x-axis
         transform.localRotation = Quaternion.AngleAxis(-mouseLook.y, Vector3.right);
         character.transform.localRotation = Quaternion.AngleAxis(mouseLook.x, character.transform.up);

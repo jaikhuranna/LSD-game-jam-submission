@@ -8,12 +8,11 @@ public class charactermovement : MonoBehaviour
     public GameObject player;
     public Rigidbody rb;
     public float jumpspeed;
-    
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         rb = GetComponent<Rigidbody>();
-
     }
 
     // Update is called once per frame
