@@ -27,14 +27,13 @@ InteractionController()
     -When SPACE is pressed, Fire Release with the confirmed interactable object
     
 InteractionObject()
-    -Has 3 functions
-    -Interact, Release, and SeeObject
+    -Has 2 function
     -To be inherited by all interactable objects
-    -Not all objects will have a release
+    -To check if the player can have a nested Interact
 
 SitSofa()
-    -Makes the player sit on sofa, disables movement
-    -There is a release, to get of sofa    
+    -Makes the player sit on sofa, disables movement  
+    -Second Interact takes player off
     
 MedicineBag()
     -Currently only has a message

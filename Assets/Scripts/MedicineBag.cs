@@ -6,8 +6,11 @@ using UnityEngine;
 public class MedicineBag : MonoBehaviour, interactObject
 {
     public void Interact(){}
-    public void Release(){}
 
+    public bool ReInteract()
+    {
+        return false;
+    }
     public String SeeObject()
     {
         return "Medicine Baggie";

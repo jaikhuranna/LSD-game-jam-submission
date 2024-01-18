@@ -18,10 +18,12 @@ public class InteractionController : MonoBehaviour
     private interactObject currentInteractableObject;
     //The UI message that is displayed
     public TMP_Text InteractMessage;
+    public interactObject LastInteracted;
 
     public void Start()
     {
         interactorSource = gameObject.transform;
+        LastInteracted = null;
     }
 
     void Update()
@@ -43,13 +45,12 @@ public class InteractionController : MonoBehaviour
                 if (SeenGameObject.TryGetComponent(out interactObject interactObj))
                 {
                     //Show a custom message if it can be interacted
-                   InteractMessage.text = interactObj.SeeObject();
+                   // InteractMessage.text = interactObj.SeeObject();
                    currentInteractableObject = interactObj;
                 }
                 else
                 {
                     //reset the message of the UI, and reset the interactable object
-                    InteractMessage.text = " ";
                     currentInteractableObject = null;
                 }
             }
@@ -68,21 +69,18 @@ public class InteractionController : MonoBehaviour
         //Try to interact with the object
         if (Input.GetKeyDown(KeyCode.E))
         {
+            if (LastInteracted != null && LastInteracted.ReInteract() )
+            {
+                LastInteracted.Interact();
+                LastInteracted = null;
+            }
             //Check if the seen object can be interacted with
             if (currentInteractableObject != null)
             {
                 currentInteractableObject.Interact();
+                LastInteracted = currentInteractableObject;
             }
         }
         
-        //Try to Release with the object
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            //Check if the seen object can be interacted with
-            if (currentInteractableObject != null)
-            {
-                currentInteractableObject.Release();
-            }
-        }
     }
 }

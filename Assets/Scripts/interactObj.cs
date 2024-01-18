@@ -2,10 +2,9 @@ using System;
 
 public interface interactObject
 {
-    //When the Player sees the Object
-    public String SeeObject();
-    //When the object is interacted with
+    //Interact with an object
     public void Interact();
-    //In case there is a counter situation
-    public void Release();
+    
+    //When you can interact with the object while already interacted once
+    public bool ReInteract();
 }
