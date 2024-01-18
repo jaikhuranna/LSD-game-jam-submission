@@ -21,15 +21,15 @@ CharacterMovement()
     
 InteractionController()
     -Checks if there is an object in front of it
-    -IF the object can be interacted with, then display the UI message
     -Does not change the referred object to save resources
     -When E is pressed, Fire Interact with the confirmed interactable object
-    -When SPACE is pressed, Fire Release with the confirmed interactable object
+    -When E is also pressed, checks cached interactable Gameobject to check if it needs to interacted again
     
 InteractionObject()
     -Has 2 function
     -To be inherited by all interactable objects
-    -To check if the player can have a nested Interact
+    -Has a primary interaction function
+    -To check if the player can have a nested Interact, then act accordingly
 
 SitSofa()
     -Makes the player sit on sofa, disables movement  

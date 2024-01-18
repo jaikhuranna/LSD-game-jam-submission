@@ -11,9 +11,5 @@ public class MedicineBag : MonoBehaviour, interactObject
     {
         return false;
     }
-    public String SeeObject()
-    {
-        return "Medicine Baggie";
-    }
-    
+
 }
