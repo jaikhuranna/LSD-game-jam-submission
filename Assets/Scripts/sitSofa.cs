@@ -16,8 +16,7 @@ public class sitSofa : MonoBehaviour , interactObject
     private bool isSitting = false;
     //The GameObject that is used to put the player into sitting mode
     public GameObject SitPosition;
-    //The Message from the sofa that is returned to the player
-    public String InteractMessage;
+    //The Message from the sofa that is returned to the player was removed
 
 
     void Start()
