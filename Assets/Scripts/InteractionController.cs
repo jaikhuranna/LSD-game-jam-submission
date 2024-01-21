@@ -47,6 +47,7 @@ public class InteractionController : MonoBehaviour
                     //Show a custom message if it can be interacted
                    // InteractMessage.text = interactObj.SeeObject();
                    currentInteractableObject = interactObj;
+                   Debug.Log("This is a Interactable Object");
                 }
                 else
                 {

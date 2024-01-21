@@ -225,14 +225,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18481654}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.109, y: 1.748, z: 13.964}
+  m_LocalRotation: {x: -0, y: -0.00016400777, z: -0, w: -1}
+  m_LocalPosition: {x: 13.594, y: 1.748, z: 13.403}
   m_LocalScale: {x: 0.3, y: 1.625, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1118643467}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 360.019, z: 0}
 --- !u!54 &18481660
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -344,6 +344,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &531474908
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 531474909}
+  m_Layer: 0
+  m_Name: Fridge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &531474909
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531474908}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.513706, y: 5.154956, z: 7.4122257}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3389649416436297821}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &544821015
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,7 +388,7 @@ GameObject:
   - component: {fileID: 544821018}
   - component: {fileID: 544821017}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2607,7 +2639,7 @@ ParticleSystem:
         m_RotationOrder: 4
     m_Range: {x: 0, y: 1}
   ForceModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -2717,7 +2749,7 @@ ParticleSystem:
     z:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 3
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -2767,7 +2799,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    inWorldSpace: 0
+    inWorldSpace: 1
     randomizePerFrame: 0
   ExternalForcesModule:
     serializedVersion: 2
@@ -5950,7 +5982,7 @@ GameObject:
   - component: {fileID: 7995768752506895987}
   - component: {fileID: 140857626681091168}
   m_Layer: 0
-  m_Name: Cube.009
+  m_Name: CusionR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6436,7 +6468,6 @@ Transform:
   - {fileID: 2942446846879419357}
   - {fileID: 6515689859233523210}
   - {fileID: 3321615242991549332}
-  - {fileID: 3389649416436297821}
   m_Father: {fileID: 4782196045746653602}
   m_LocalEulerAnglesHint: {x: -90, y: -90, z: 90}
 --- !u!33 &1984298322194721284
@@ -6793,7 +6824,7 @@ GameObject:
   - component: {fileID: 8670356511522886921}
   - component: {fileID: 8670356511522886922}
   m_Layer: 0
-  m_Name: Cube.008
+  m_Name: Sofa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6811,8 +6842,7 @@ Transform:
   m_LocalPosition: {x: 0.014623263, y: -0.015173015, z: 0.003108165}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4844074454183822385}
+  m_Children: []
   m_Father: {fileID: 1953181422403783566}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &3345921994388573272
@@ -6865,14 +6895,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4162400650930261438}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.04041793, y: -0.031513248, z: 0.0023673503}
-  m_LocalScale: {x: 0.25923714, y: 0.1512355, z: 0.24224392}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 1.7041359, y: -4.36613, z: 8.820341}
+  m_LocalScale: {x: 77.77115, y: 45.370647, z: 72.673164}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6608971055978082987}
   - {fileID: 6268791972258617886}
-  m_Father: {fileID: 1953181422403783566}
+  m_Father: {fileID: 531474909}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3527840722268269047
 MeshFilter:
@@ -7268,13 +7298,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8747891783112358383}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1816724, y: -0.1806, z: 0.041409}
-  m_LocalScale: {x: 1.221, y: 1.221, z: 1.221}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 13.929615, y: 2.25334, z: 16.748497}
+  m_LocalScale: {x: 36.63, y: 36.629993, z: 36.629993}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 544821016}
-  m_Father: {fileID: 3321615242991549332}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &5029631198117200485
 Transform:
@@ -7904,7 +7934,7 @@ GameObject:
   - component: {fileID: 1398715315512373079}
   - component: {fileID: 2942441784220651809}
   m_Layer: 0
-  m_Name: Cube.010
+  m_Name: CusionL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8048,7 +8078,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cmScript: {fileID: 18481661}
   SitPosition: {fileID: 1017384513}
-  InteractMessage: Press E to Sit
 --- !u!1 &8747891783112358383
 GameObject:
   m_ObjectHideFlags: 0
@@ -8061,6 +8090,7 @@ GameObject:
   - component: {fileID: 1984298322194721284}
   - component: {fileID: 2199977496162250564}
   - component: {fileID: 8747891783112358384}
+  - component: {fileID: 8747891783112358385}
   m_Layer: 0
   m_Name: Faucet
   m_TagString: Untagged
@@ -8080,6 +8110,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5e2ddca0ae034662b648f7644e55a6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cmScript: {fileID: 18481661}
+--- !u!65 &8747891783112358385
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8747891783112358383}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.022016825, y: 0.020498214, z: 0.025682483}
+  m_Center: {x: 0.0007275281, y: 0.008534686, z: 0.000817672}
 --- !u!23 &8806422092390206062
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8443,3 +8495,5 @@ SceneRoots:
   - {fileID: 1906516577}
   - {fileID: 116616786}
   - {fileID: 639840080325005927}
+  - {fileID: 531474909}
+  - {fileID: 4844074454183822385}

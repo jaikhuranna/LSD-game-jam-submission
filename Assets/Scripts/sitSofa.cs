@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class sitSofa : MonoBehaviour , interactObject
 {
@@ -10,6 +11,7 @@ public class sitSofa : MonoBehaviour , interactObject
     public charactermovement cmScript;
     private GameObject player;
 
+    private BoxCollider collider;
     //Caches the value of the scale of the player
     private Vector3 startScale;
     //bool for the player sitting on the sofa
@@ -21,6 +23,7 @@ public class sitSofa : MonoBehaviour , interactObject
 
     void Start()
     {
+        gameObject.GetComponent<BoxCollider>();
         player = cmScript.GameObject();
         startScale = player.transform.localScale;
     }
@@ -51,6 +54,7 @@ public class sitSofa : MonoBehaviour , interactObject
         {
                 //disable sitting the move player back
                 isSitting = false;
+                //collider.enabled = true;
                 player.transform.position += new Vector3(0f, 0f, -1f);
                 //enable player movement and revert scale change
                 cmScript.enabled = true;
@@ -61,6 +65,11 @@ public class sitSofa : MonoBehaviour , interactObject
             //Only fire if the player is sitting
             //set the player to sit position
             player.transform.position = SitPosition.transform.position;
+            // player.transform.Rotate(0, 180, 0, Space.Self);
+            //collider.enabled = false;  
+            // this line is conflicting with the current implementation of the mouse control.
+            // TODO: to implement the rotation reset of the player
+            // The above line is to make the player look to the tv when E is pressed;
             //cancel the player movement
             isSitting = true;
             cmScript.rb.velocity = Vector3.zero;
