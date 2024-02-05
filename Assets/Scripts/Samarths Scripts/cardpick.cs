@@ -7,20 +7,19 @@ public class cardpick : MonoBehaviour,interactObject
     public bool cardpickedup = false;
     private bool holdingObj = false;
     [SerializeField] private GameObject card, anchor;
-    
     public void Interact()
     {
         if (!cardpickedup && !holdingObj)
         {
-            PickUpStrawberry();
+            PickUpCard();
         }
         else
         {
-            PutDownStrawberry();
+            PutDownCard();
         }
     }
 
-    void PickUpStrawberry()
+    void PickUpCard()
     {
         holdingObj = true;
         cardpickedup = true;
@@ -30,10 +29,11 @@ public class cardpick : MonoBehaviour,interactObject
         card.GetComponent<BoxCollider>().enabled = false;
     }
 
-    void PutDownStrawberry()
+    void PutDownCard()
     {
         cardpickedup = false;
         holdingObj = true;
+        
 
     }
 

@@ -13,7 +13,7 @@ public class InteractionController : MonoBehaviour
     //Source of the Ray to interact
     public Transform interactorSource;
     //The Latest GameObject the player sees
-    private GameObject SeenGameObject;
+    public GameObject SeenGameObject;
     //The Current Interactable Onbject
     private interactObject currentInteractableObject;
     //The UI message that is displayed
