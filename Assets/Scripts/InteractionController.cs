@@ -60,7 +60,7 @@ public class InteractionController : MonoBehaviour
         else
         {
             //reset the message of the UI, and reset the interactable object
-            InteractMessage.text = " ";
+            //InteractMessage.text = " ";
             currentInteractableObject = null;
             SeenGameObject = null;
         }

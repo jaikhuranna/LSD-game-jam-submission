@@ -6,6 +6,7 @@ public class insertCard : MonoBehaviour, interactObject
 {
     public GameObject anchor;
     private bool isInserted = false;
+    public int slotNum;
     public void Interact()
     {
         if (!isInserted)

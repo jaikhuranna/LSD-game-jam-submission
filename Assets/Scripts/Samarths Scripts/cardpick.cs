@@ -5,11 +5,12 @@ using UnityEngine;
 public class cardpick : MonoBehaviour,interactObject
 {
     public bool cardpickedup = false;
-    private bool holdingObj = false;
     [SerializeField] private GameObject card, anchor;
+    [SerializeField] private RoyalFlushChecker RFCscript;
+    public int cardNum;
     public void Interact()
     {
-        if (!cardpickedup && !holdingObj)
+        if (!cardpickedup && !RFCscript.holdingObj)
         {
             PickUpCard();
         }
@@ -21,7 +22,7 @@ public class cardpick : MonoBehaviour,interactObject
 
     void PickUpCard()
     {
-        holdingObj = true;
+        RFCscript.holdingObj = true;
         cardpickedup = true;
         card.transform.SetParent(anchor.transform);
         card.transform.position = anchor.transform.position;
@@ -32,9 +33,7 @@ public class cardpick : MonoBehaviour,interactObject
     void PutDownCard()
     {
         cardpickedup = false;
-        holdingObj = true;
-        
-
+        RFCscript.holdingObj = true;
     }
 
     public bool ReInteract()

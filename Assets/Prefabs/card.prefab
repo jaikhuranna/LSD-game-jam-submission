@@ -149,3 +149,4 @@ MonoBehaviour:
   cardpickedup: 0
   card: {fileID: 5095136775459676304}
   anchor: {fileID: 0}
+  RFCscript: {fileID: 0}
