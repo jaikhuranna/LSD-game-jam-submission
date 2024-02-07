@@ -1113,6 +1113,7 @@ MonoBehaviour:
   safeCamera: {fileID: 569759878}
   isEntry: 1
   count: 0
+  hasBeenMoved: 0
   needlePivot: {fileID: 1550885796}
   isInteracted: 0
 --- !u!1001 &1752099229
