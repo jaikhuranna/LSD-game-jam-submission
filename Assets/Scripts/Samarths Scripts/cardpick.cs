@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class cardpick : MonoBehaviour,interactObject
     [SerializeField] private GameObject card, anchor;
     [SerializeField] private RoyalFlushChecker RFCscript;
     public int cardNum;
+    public Vector3 ResetPosition;
     public void Interact()
     {
         if (!cardpickedup && !RFCscript.holdingObj)
@@ -28,6 +30,11 @@ public class cardpick : MonoBehaviour,interactObject
         card.transform.position = anchor.transform.position;
         card.GetComponent<Rigidbody>().isKinematic = true;
         card.GetComponent<BoxCollider>().enabled = false;
+    }
+
+    private void Start()
+    {
+        ResetPosition = gameObject.transform.position;
     }
 
     void PutDownCard()

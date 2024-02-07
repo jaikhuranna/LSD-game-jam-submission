@@ -5,7 +5,8 @@ using UnityEngine;
 public class insertCard : MonoBehaviour, interactObject
 {
     public GameObject anchor;
-    private bool isInserted = false;
+    public bool isInserted = false;
+    [SerializeField] private cardpick[] cards;
     public int slotNum;
     public void Interact()
     {
@@ -18,8 +19,18 @@ public class insertCard : MonoBehaviour, interactObject
     public void Inserted()
     {
         isInserted = true;
-        anchor.transform.GetChild(0).position = gameObject.transform.position;
+        anchor.transform.GetChild(0).position = gameObject.transform.GetChild(0).position;
         anchor.transform.GetChild(0).SetParent(gameObject.transform);
+        StartCoroutine(CardSetPosition());
+
+    }
+
+    IEnumerator CardSetPosition()
+    {
+        gameObject.transform.GetChild(1).localPosition = new Vector3(0,0,0);
+        gameObject.transform.GetChild(1).localRotation = Quaternion.Euler(0,0,0);
+        
+        yield return new WaitForSeconds(1);
         
     }
 
