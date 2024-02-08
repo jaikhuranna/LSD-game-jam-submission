@@ -40,7 +40,7 @@ public class cardpick : MonoBehaviour,interactObject
     void PutDownCard()
     {
         cardpickedup = false;
-        RFCscript.holdingObj = true;
+        RFCscript.holdingObj = false;
     }
 
     public bool ReInteract()

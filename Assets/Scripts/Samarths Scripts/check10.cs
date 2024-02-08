@@ -41,6 +41,7 @@ public class check10 : MonoBehaviour,interactObject
                 Allcards[i].transform.SetParent(cardHolder.transform);
                 Allcards[i].GetComponent<BoxCollider>().enabled = true;
                 Allcards[i].GetComponent<Rigidbody>().isKinematic = false;
+                cardScript[i].cardpickedup = false;
                 count = 0;
             }
 
