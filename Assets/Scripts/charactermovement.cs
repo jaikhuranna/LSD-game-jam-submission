@@ -19,8 +19,8 @@ public class charactermovement : MonoBehaviour
     void Update()
     {
 
-        var x = Input.GetAxis("Horizontal")  * Time.deltaTime;
-        var z = Input.GetAxis("Vertical")  * Time.deltaTime;
+        var x = Input.GetAxis("Horizontal");
+        var z = Input.GetAxis("Vertical");
 
         Vector3 moveVec = Vector3.ClampMagnitude(transform.right * x + transform.forward * z, 1.0f)*  speed;
         moveVec += Vector3.up * rb.velocity.y;    
