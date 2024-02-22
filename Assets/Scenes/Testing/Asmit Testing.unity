@@ -230,6 +230,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 200044732}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &323515954 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8623007637222799196, guid: 030bb495bac526e47a17aaeb47ca98ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 450548723}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &368221542
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,7 +781,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 450548723}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 323515954}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d151b1987e20b4880b636328f94f6c, type: 3}
@@ -1111,10 +1117,11 @@ MonoBehaviour:
   charMoverment: {fileID: 1341563944}
   cameraObj: {fileID: 739825553}
   safeCamera: {fileID: 569759878}
-  isEntry: 1
+  needlePivot: {fileID: 1550885796}
+  safe: {fileID: 962328123}
+  playerObj: {fileID: 323515954}
   count: 0
   hasBeenMoved: 0
-  needlePivot: {fileID: 1550885796}
   isInteracted: 0
 --- !u!1001 &1752099229
 PrefabInstance:
