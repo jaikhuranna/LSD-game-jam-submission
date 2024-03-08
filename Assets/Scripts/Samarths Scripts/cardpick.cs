@@ -28,6 +28,7 @@ public class cardpick : MonoBehaviour,interactObject
         cardpickedup = true;
         card.transform.SetParent(anchor.transform);
         card.transform.position = anchor.transform.position;
+        card.transform.Rotate(0,0,0);
         card.GetComponent<Rigidbody>().isKinematic = true;
         card.GetComponent<BoxCollider>().enabled = false;
     }
