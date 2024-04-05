@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -9,6 +10,9 @@ public class IpodManager : MonoBehaviour
     public bool isPressed = false;
     public bool hasBeenPressed = false;
     public Collider boxCollider;
+    // public Collider gravTrigger;
+
+    public Rigidbody playerRb;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +21,10 @@ public class IpodManager : MonoBehaviour
     private void OnTriggerEnter(Collider other){
         isPressed = true;
         hasBeenPressed = true;
+        // playerRb.useGravity = false;
         //play audio
     }
+    
     IEnumerator AudioTime()
     {
         //wait for the ticks
@@ -27,10 +33,5 @@ public class IpodManager : MonoBehaviour
     }
     private void OnTriggerExit(Collider other){
         StartCoroutine("AudioTime");
-    }
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
