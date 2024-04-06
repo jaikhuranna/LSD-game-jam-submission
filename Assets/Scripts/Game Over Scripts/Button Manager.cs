@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class ButtonManager : MonoBehaviour
    public int playagainCounter, mainmenuCounter, Counter;
    // Game objects used to set them Active 
    public GameObject playagainGameObj, mainmenuGameObj, gameoverObj, letterObj;
+   //You lost text 
+   [SerializeField] private TMP_Text YLtext;
 
    private void Start()
    { 
@@ -70,6 +73,35 @@ public class ButtonManager : MonoBehaviour
       {
          gameoverObj.SetActive(false);
          letterObj.SetActive(true);
+      }
+
+      switch (mainmenuCounter+playagainCounter)
+      {
+         case 1:
+            YLtext.text = "You Lost";
+            YLtext.rectTransform.anchoredPosition = new Vector2(-280, -167);
+            break;
+         case 2:
+            YLtext.text = "Yeu Lost";
+            YLtext.rectTransform.anchoredPosition = new Vector2(283, 142);
+            break;
+         case 3:
+            YLtext.text = "Yeur Lost";
+            YLtext.rectTransform.anchoredPosition = new Vector2(-237, 40);
+            break;
+         case 4:
+            YLtext.text = "Yeur Loat";
+            YLtext.rectTransform.anchoredPosition = new Vector2(3, -117);
+            break;
+         case 5:
+            YLtext.text = "Deur L";
+            YLtext.rectTransform.anchoredPosition = new Vector2(-225, -127);
+            break;
+         case 6:
+            YLtext.text = "Dear Alan";
+            YLtext.rectTransform.anchoredPosition = new Vector2(-297, 195);
+            break;
+         
       }
    }
 }
